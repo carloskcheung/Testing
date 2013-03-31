@@ -287,7 +287,7 @@
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
             <div class="nav-collapse collapse">
               <ul class="nav">
-                <li><a href="#">App</a></li>
+                <li><%= link_to 'App', app_path %></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#team">Team</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -305,6 +305,9 @@
                   </ul>
                 </li>
               </ul>
+              <ul class="nav pull-right">
+                <li><%= link_to 'Login',  "#" %></li>
+              </ul>  
             </div><!--/.nav-collapse -->
           </div><!-- /.navbar-inner -->
         </div><!-- /.navbar -->
@@ -420,16 +423,16 @@
 
 
 
-      <br /><br /><br />
+
       <span id="team">
       <!-- Team -->
         <div class="container clearfix">
           <div class="span12">
-
+          <h1> Team </h1> <br />
               <div class="span4">
                 <span> <%= image_tag("Zaarly.Photo.jpg", :alt => "Carlos") %> </span> 
                 <h3>Carlos Cheung</h3>
-                <p>Carlos is a student at <a title="Georgetown" href="http://georgetown.edu/">Georgetown University</a></p>
+                <p>Carlos is a student at <a title="Georgetown" href="http://georgetown.edu/">Georgetown University</a> Donec ullamcorper nulla non metus auctor fringilla. Donec ullamcorper nulla non metus auctor fringilla.</p>
               </div>
 
               <span class="span2"> </span>
@@ -437,20 +440,18 @@
               <div class="span4">
                 <span> <%= image_tag("Morgan.jpg", :alt => "Morgan") %> </span> 
                 <h3>Morgan Chang</h3>
-                <p>Morgan is a student at <a title="Georgetown" href="http://georgetown.edu/">Georgetown University</a></p>
+                <p>Morgan is a student at <a title="Georgetown" href="http://georgetown.edu/">Georgetown University</a> Donec ullamcorper nulla non metus auctor fringilla. Donec ullamcorper nulla non metus auctor fringilla.</p>
               </div>
-
 
           </div>
         </div>
 
 
 
-
       <!-- /END THE FEATURETTES -->
 
-      <br /> <br />
-      <hr class="featurette-divider">
+      <br />
+      <br />
 
       <!-- FOOTER -->
       <footer>

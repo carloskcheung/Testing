@@ -61,12 +61,12 @@
             <dl>
                 <dt>Workout</dt>
                 <dd>#:Workout#</dd>
-                <dt>Unit Price</dt>
-                <dd>#:kendo.toString(UnitPrice, "c")#</dd>
-                <dt>Units In Stock</dt>
-                <dd>#:UnitsInStock#</dd>
-                <dt>Discontinued</dt>
-                <dd>#:Discontinued#</dd>
+                <dt>Sets &amp Reps</dt>
+                <dd>#:kendo.toString(Sets, "c")#</dd>
+                <dt>Weight</dt>
+                <dd>#:Weight#</dd>
+                <dt>Completed</dt>
+                <dd>#:Completed#</dd>
             </dl>
         </div>
     </script>
@@ -83,18 +83,18 @@
                     <input type="text" class="k-textbox" data-bind="value:Workout" name="Workout" required="required" validationMessage="required" />
                     <span data-for="Workout" class="k-invalid-msg"></span>
                 </dd>
-                <dt>Unit Price</dt>
+                <dt>Sets</dt>
                 <dd>
-                    <input type="text" data-bind="value:UnitPrice" data-role="numerictextbox" data-type="number" name="UnitPrice" required="required" min="1" validationMessage="required" />
-                    <span data-for="UnitPrice" class="k-invalid-msg"></span>
+                    <input type="text" data-bind="value:Sets" data-role="numerictextbox" data-type="number" name="Sets" required="required" min="1" validationMessage="required" />
+                    <span data-for="Sets" class="k-invalid-msg"></span>
                 </dd>
-                <dt>Units In Stock</dt>
+                <dt>Weight</dt>
                 <dd>
-                    <input type="text" data-bind="value:UnitsInStock" data-role="numerictextbox" name="UnitsInStock" required="required" data-type="number" min="0" validationMessage="required" />
-                    <span data-for="UnitsInStock" class="k-invalid-msg"></span>
+                    <input type="text" data-bind="value:Weight" data-role="numerictextbox" name="Weight" required="required" data-type="number" min="0" validationMessage="required" />
+                    <span data-for="Weight" class="k-invalid-msg"></span>
                 </dd>
-                <dt>Discontinued</dt>
-                <dd><input type="checkbox" name="Discontinued" data-bind="checked:Discontinued"></dd>
+                <dt>Completed</dt>
+                <dd><input type="checkbox" name="Completed" data-bind="checked:Completed"></dd>
             </dl>
         </div>
     </script>
@@ -127,16 +127,16 @@
                         }
                     },
                     batch: true,
-                    pageSize: 4,
+                    pageSize: 6,
                     schema: {
                         model: {
                             id: "ProductID",
                             fields: {
                                 ProductID: { editable: false, nullable: true },
                                 Workout: "Workout",
-                                UnitPrice: { type: "number" },
-                                Discontinued: { type: "boolean" },
-                                UnitsInStock: { type: "number" }
+                                Sets: { type: "number" },
+                                Completed: { type: "boolean" },
+                                Weight: { type: "number" }
                             }
                         }
                     }
